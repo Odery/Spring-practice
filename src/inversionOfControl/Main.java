@@ -1,8 +1,14 @@
 package inversionOfControl;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     public static void main(String[] args) {
-        Student student = new Student(new MathTeacher());
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Student student = new Student(context.getBean("mathTeacher",ITeacher.class));
+
         student.printHomeWork();
+
+        context.close();
     }
 }
