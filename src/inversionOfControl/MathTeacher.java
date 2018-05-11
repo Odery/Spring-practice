@@ -3,10 +3,6 @@ package inversionOfControl;
 public class MathTeacher implements ITeacher {
     private TeacherBook notes;
 
-    public MathTeacher(TeacherBook notes) {
-        this.notes = notes;
-    }
-
     @Override
     public String getNote() {
         return notes.getNote();
@@ -15,5 +11,9 @@ public class MathTeacher implements ITeacher {
     @Override
     public String getHomeWork() {
         return "Do some logarithms & integrals";
+    }
+
+    public void setNotes(TeacherBook notes) {
+        this.notes = notes;
     }
 }
