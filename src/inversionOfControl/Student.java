@@ -11,4 +11,8 @@ public class Student {
     public void printHomeWork(){
         System.out.println(teacher.getHomeWork());
     }
+
+    public void printTeacherNotes() {
+        System.out.println(teacher.getNote());
+    }
 }

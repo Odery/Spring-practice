@@ -3,7 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="mathTeacher" class="inversionOfControl.MathTeacher"/>
-    <bean id="musicTeacher" class="inversionOfControl.MusicTeacher"/>
+    <bean id="notes" class="inversionOfControl.TeacherBook"/>
+    <bean id="mathTeacher" class="inversionOfControl.MathTeacher">
+        <constructor-arg ref="notes"/>
+    </bean>
+    <bean id="musicTeacher" class="inversionOfControl.MusicTeacher">
+        <constructor-arg ref="notes"/>
+    </bean>
 
 </beans>
