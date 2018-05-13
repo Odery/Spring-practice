@@ -6,11 +6,11 @@ public class Main {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         Student student = new Student(context.getBean("musicTeacher", ITeacher.class));
+        Student student2 = new Student(context.getBean("musicTeacher", ITeacher.class));
 
-        student.printHomeWork();
-        student.printTeacherNotes();
-        student.printTeacherName();
-
+        System.out.println(student.getTeacher() == student2.getTeacher());
+        System.out.println(student.getTeacher());
+        System.out.println(student2.getTeacher());
         context.close();
     }
 }

@@ -11,7 +11,7 @@
         <property name="notes" ref="notes"/>
         <property name="name" value="${teacher1.name}"/>
     </bean>
-    <bean id="musicTeacher" class="inversionOfControl.MusicTeacher">
+    <bean id="musicTeacher" class="inversionOfControl.MusicTeacher" scope="prototype">
         <constructor-arg ref="notes"/>
         <property name="name" value="${teacher2.name}"/>
     </bean>

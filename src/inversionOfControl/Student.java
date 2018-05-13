@@ -19,4 +19,8 @@ public class Student {
     public void printTeacherName() {
         System.out.println(teacher.getName());
     }
+
+    public ITeacher getTeacher() {
+        return teacher;
+    }
 }
