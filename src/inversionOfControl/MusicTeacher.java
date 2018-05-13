@@ -1,6 +1,7 @@
 package inversionOfControl;
 
 public class MusicTeacher implements ITeacher {
+    private String name;
     private TeacherBook notes;
 
     public MusicTeacher(TeacherBook notes) {
@@ -15,5 +16,15 @@ public class MusicTeacher implements ITeacher {
     @Override
     public String getHomeWork() {
         return "Play Mozart son!";
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }

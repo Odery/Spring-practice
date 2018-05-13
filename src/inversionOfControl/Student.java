@@ -15,4 +15,8 @@ public class Student {
     public void printTeacherNotes() {
         System.out.println(teacher.getNote());
     }
+
+    public void printTeacherName() {
+        System.out.println(teacher.getName());
+    }
 }

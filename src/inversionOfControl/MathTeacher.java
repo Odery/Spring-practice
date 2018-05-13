@@ -1,6 +1,7 @@
 package inversionOfControl;
 
 public class MathTeacher implements ITeacher {
+    private String name;
     private TeacherBook notes;
 
     @Override
@@ -15,5 +16,15 @@ public class MathTeacher implements ITeacher {
 
     public void setNotes(TeacherBook notes) {
         this.notes = notes;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
     }
 }
