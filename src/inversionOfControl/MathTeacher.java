@@ -27,4 +27,12 @@ public class MathTeacher implements ITeacher {
     public void setName(String name) {
         this.name = name;
     }
+
+    public void doInit() {
+        System.out.println(this + ": initializing!");
+    }
+
+    public void doDestroy() {
+        System.out.println(this + ": destroying!");
+    }
 }

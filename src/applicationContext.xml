@@ -7,7 +7,8 @@
     <context:property-placeholder location="classpath:teacher.properties"/>
 
     <bean id="notes" class="inversionOfControl.TeacherBook"/>
-    <bean id="mathTeacher" class="inversionOfControl.MathTeacher">
+    <bean id="mathTeacher" class="inversionOfControl.MathTeacher"
+          init-method="doInit" destroy-method="doDestroy">
         <property name="notes" ref="notes"/>
         <property name="name" value="${teacher1.name}"/>
     </bean>
