@@ -8,6 +8,7 @@ public class Main {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext2.xml");
         ITeacher teacher = context.getBean("javaTeacher", ITeacher.class);
 
-        System.out.println(teacher.getHomeWork());
+        System.out.println(teacher.getName());
     }
+
 }
