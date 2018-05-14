@@ -6,13 +6,13 @@
 
     <context:property-placeholder location="classpath:teacher.properties"/>
 
-    <bean id="notes" class="inversionOfControl.TeacherBook"/>
-    <bean id="mathTeacher" class="inversionOfControl.MathTeacher"
+    <bean id="notes" class="xmlConfig.TeacherBook"/>
+    <bean id="mathTeacher" class="xmlConfig.MathTeacher"
           init-method="doInit" destroy-method="doDestroy">
         <property name="notes" ref="notes"/>
         <property name="name" value="${teacher1.name}"/>
     </bean>
-    <bean id="musicTeacher" class="inversionOfControl.MusicTeacher" scope="prototype">
+    <bean id="musicTeacher" class="xmlConfig.MusicTeacher" scope="prototype">
         <constructor-arg ref="notes"/>
         <property name="name" value="${teacher2.name}"/>
     </bean>

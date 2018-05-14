@@ -1,4 +1,4 @@
-package inversionOfControl;
+package xmlConfig;
 
 public class MathTeacher implements ITeacher {
     private String name;

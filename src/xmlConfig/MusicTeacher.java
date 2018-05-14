@@ -1,4 +1,4 @@
-package inversionOfControl;
+package xmlConfig;
 
 public class MusicTeacher implements ITeacher {
     private String name;

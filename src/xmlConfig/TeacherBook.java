@@ -1,4 +1,4 @@
-package inversionOfControl;
+package xmlConfig;
 
 public class TeacherBook implements ITeacherBook {
     @Override
