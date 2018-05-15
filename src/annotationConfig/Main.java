@@ -1,13 +1,14 @@
 package annotationConfig;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import xmlConfig.ITeacher;
 
 public class Main {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext2.xml");
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(TeacherConfig.class);
         ITeacher teacher = context.getBean("javaTeacher", ITeacher.class);
 
+        System.out.println(teacher.getNote());
         context.close();
     }
 
