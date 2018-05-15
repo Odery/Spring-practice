@@ -3,16 +3,13 @@ package annotationConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 import xmlConfig.ITeacher;
 import xmlConfig.ITeacherBook;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-@Component
-@Scope("singleton")
+
 public class JavaTeacher implements ITeacher {
     private ITeacherBook book;
     @Value("${teacher1.name}")

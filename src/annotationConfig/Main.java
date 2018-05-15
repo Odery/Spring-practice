@@ -9,6 +9,7 @@ public class Main {
         ITeacher teacher = context.getBean("javaTeacher", ITeacher.class);
 
         System.out.println(teacher.getNote());
+        System.out.println(teacher.getName());
         context.close();
     }
 

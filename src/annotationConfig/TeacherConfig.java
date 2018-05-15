@@ -2,10 +2,12 @@ package annotationConfig;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import xmlConfig.ITeacher;
 import xmlConfig.ITeacherBook;
 
 @Configuration
+@PropertySource("classpath:teacher.properties")
 public class TeacherConfig {
 
     @Bean
@@ -21,7 +23,6 @@ public class TeacherConfig {
     @Bean
     public ITeacher javaTeacher() {
         JavaTeacher teacher = new JavaTeacher();
-        teacher.setTeacherBook(javaBook());
         return teacher;
     }
 }
